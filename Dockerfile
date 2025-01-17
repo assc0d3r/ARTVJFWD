@@ -6,7 +6,7 @@ COPY requirements.txt /requirements.txt
 
 RUN cd /
 RUN pip3 install -U pip && pip3 install -U -r requirements.txt
-RUN mkdir /VJ-Forward-Bot
-WORKDIR /VJ-Forward-Bot
-COPY . /VJ-Forward-Bot
+RUN mkdir /artfwd
+WORKDIR /artfwd
+COPY . /artfwd
 CMD gunicorn app:app & python3 main.py
